@@ -29,17 +29,24 @@
       <button id="closeBtn"><p>Close</p></button>
     </div>
 
+    <div class="popup2">
+      <img src="img/cross.png" id="closeErrorCross" alt="cross-close" />
+      <h3>Error!</h3>
+      <p>Please enter an email!</p>
+      <button id="closeErrorBtn"><p>Close</p></button>
+    </div>
+
     <header>
       <img src="img/cloud.png" class="cloud" alt="cloud1" />
 
-      <img src="img/logo.svg" class="logo" alt="logo" />
+      <a href=""><img src="img/logo.svg" class="logo" alt="logo" /></a>
 
       <img src="img/cloud-2.png" class="cloud" alt="cloud2" />
     </header>
 
     <main>
       <div class="heading">
-        <h1>Under Construction</h1>
+        <h2>Under Construction</h2>
         <p class="subheading">
           We're making lots of improvements and will be back soon
         </p>
@@ -96,18 +103,71 @@
       </div>
       <div class="event">
         <p>Check our event page when you wait:</p>
-        <button><p>Go to the event</p></button>
+        <a href="https://egorovagency.by/"
+          ><button>
+            <p>Go to the event</p>
+            <img src="img/arrow.png" alt="arrow-btn" /></button
+        ></a>
       </div>
     </main>
 
-    <footer>
+    <div class="footer">
       <div class="search">
-        <input type="text" class="notify" />
+        <input
+          type="text"
+          class="notify"
+          placeholder="Enter your Email and get notified"
+        />
         <button class="arrow-btn">
           <img src="img/arrow.png" alt="arrow-search-btn" />
         </button>
       </div>
-    </footer>
+      <a href="#accordion"
+        ><div class="down-bottom">
+          <p>Other Events</p>
+          <img src="img/arrow-down.png" alt="down-cross" /></div
+      ></a>
+    </div>
+
+    <div class="bottom">
+      <h2 class="all-events">All events</h2>
+
+      <ul class="horizontalaccordion1" id="accordion">
+        <li id="one">
+          <a href="#one" class="accordion-link"><p>Hawaiian party</p></a>
+          <div>Информация первого слайда.</div>
+        </li>
+
+        <li id="two">
+          <a href="#two">Мafia party</a>
+          <div>None</div>
+        </li>
+        <li id="three">
+          <a href="#three">Party</a>
+          <div>None</div>
+        </li>
+        <li id="four">
+          <a href="#four">Party on the beach</a>
+          <div>None</div>
+        </li>
+        <li id="five">
+          <a href="#five">Home Security</a>
+          <div>None</div>
+        </li>
+        <li id="six">
+          <a href="#six">Network Design & Implementation</a>
+          <div>None</div>
+        </li>
+        <li id="seven">
+          <a href="#seven">System Design & Engineering</a>
+          <div>None</div>
+        </li>
+        <li id="eight">
+          <a href="#eight">Client Care Plans</a>
+          <div>None</div>
+        </li>
+      </ul>
+    </div>
 
     <script src="index.js" async defer></script>
   </body>
