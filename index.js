@@ -8,6 +8,7 @@ const closeErrorBtn = document.getElementById("closeErrorBtn");
 const closeErrorCross = document.getElementById("closeErrorCross");
 const subBtn = document.querySelector(".arrow-btn");
 const notify = document.querySelector(".notify");
+const triggers = [...document.querySelectorAll(".trigger")];
 
 notify.addEventListener("input", removeError);
 
@@ -101,3 +102,51 @@ function convertMiliseconds(miliseconds) {
 
   return [days, hours, minutes, seconds];
 }
+
+for (let i = 0; i < triggers.length; i++) {
+  triggers[
+    i
+  ].style.backgroundImage = `linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162c4e 100%), url('img/accord${
+    i + 1
+  }.png')`;
+}
+
+$(".item").first().addClass("active");
+let activeItem = $(".item").first().filter(".active");
+let content = $(".item").first().find(".content");
+let activeContent = activeItem.find(".content");
+activeContent.animate({
+  width: "0px",
+});
+content.animate({
+  width: "995px",
+});
+
+$(function () {
+  $(".trigger").on("click", function (e) {
+    e.preventDefault();
+    let $this = $(this),
+      container = $this.closest(".menu"),
+      item = $this.closest(".item"),
+      items = container.find(".item"),
+      activeItem = items.filter(".active"),
+      content = item.find(".content"),
+      activeContent = activeItem.find(".content");
+
+    if (!item.hasClass("active")) {
+      items.removeClass("active");
+      item.addClass("active");
+      activeContent.animate({
+        width: "0px",
+      });
+      content.animate({
+        width: "995px",
+      });
+    } else {
+      item.removeClass("active");
+      content.animate({
+        width: "0px",
+      });
+    }
+  });
+});

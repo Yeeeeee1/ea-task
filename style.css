@@ -549,102 +549,111 @@ main .event button p {
   opacity: 0.39;
 }
 
-.horizontalaccordion1 {
+ul {
+  width: 1704px;
+  height: 682px;
+  list-style: none;
   margin: 0 auto;
   padding: 0;
-  height: 682px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.horizontalaccordion1 > li {
-  overflow: hidden;
+li {
+  height: 100%;
   float: left;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 40px;
-  height: 682px;
-  background: #f0f0f0;
-  transition: width 0.3s;
-  -moz-transition: width 0.3s;
-  -webkit-transition: width 0.3s;
-  -o-transition: width 0.3s;
 }
 
-.horizontalaccordion1 > li > a {
-  display: inline-block;
-  margin: 0;
-  padding: 10px;
-  height: 19px;
-  width: 682px;
-  border-left: #f0f0f0 1px solid;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  color: #000;
-  background: #ccc;
+.trigger {
+  height: 100%;
+  width: 85px;
+  border-right: 2px solid white;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+
+.trigger p {
+  text-align: center;
   white-space: nowrap;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(22, 44, 78, 0)), to(#162c4e));
-  background: linear-gradient(90deg, rgba(22, 44, 78, 0) 0%, #162c4e 100%);
-  -moz-transform: rotate(90deg) translate(-40px, 0px);
-  /* FF3.5+ */
-  -moz-transform-origin: 0 100%;
-  -o-transform: rotate(90deg) translate(-40px, 0px);
-  /* Opera 10.5 */
-  -o-transform-origin: 0 100%;
-  -webkit-transform: rotate(90deg) translate(-40px, 0px);
-  /* Saf3.1+, Chrome */
-  -webkit-transform-origin: 0 100%;
-  transform: rotate(90deg) translate(-40px, 0px);
-  /* Saf3.1+, Chrome */
-  transform-origin: 0 100%;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0) progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc);
-  /* IE6,IE7 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)" "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)";
-  /* IE8 */
-}
-
-.horizontalaccordion1 > li > a p {
-  color: white;
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1);
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: 450px;
+  left: -80%;
+  font-style: normal;
   font-weight: 600;
   font-size: 32px;
   line-height: 100%;
+  color: #ffffff;
 }
 
-.horizontalaccordion1 > li > div {
-  display: inline-block;
-  overflow: auto;
-  position: relative;
-  top: -40px;
-  left: 40px;
-  *top: 0px;
-  *left: 0px;
-  /* IE7 Hack */
-  margin: 0;
-  width: 995px;
-  height: 682px;
-  padding: 10px;
-}
-
-.horizontalaccordion1 > li:target {
-  background-image: url("img/back1.png");
+.content {
+  float: left;
+  background-image: url("img/back1.png") !important;
+  width: 0;
   overflow: hidden;
-  width: 995px;
+  height: 100%;
 }
 
-.horizontalaccordion1 > li:target > a {
+.content p,
+.content h3 {
+  width: 250px;
   color: #fff;
-  background: #162c4e;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0) progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000);
-  /* IE 5.5 - IE 7 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)" "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";
-  /* IE 8 */
+  padding: 15px;
+}
+
+.content p:first-child,
+.content h3:first-child {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-top: 435px;
+}
+
+.active > .trigger {
+  background-color: #162c4e !important;
+}
+
+.date-time {
+  width: 160px !important;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.content-button {
+  margin-top: 20px;
+  margin-left: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-left: 8px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  width: 256px;
+  height: 62px;
+  background: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.content-button p {
+  padding: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 0 !important;
+}
+
+.content-button:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 2px solid white;
+}
+
+.content-button:hover p {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: white;
 }
 
 .error {
